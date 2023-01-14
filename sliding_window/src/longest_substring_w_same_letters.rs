@@ -1,4 +1,4 @@
-fn longest_substring_with_k_distinct(str1: &str, k: usize) -> usize {
+fn longest_substring_same_chars(str1: &str, k: usize) -> usize {
     let mut window_start = 0;
     let mut max_length = 0;
     let mut char_frequency = std::collections::HashMap::new();
@@ -25,12 +25,12 @@ mod tests {
     use super::*;
 
     #[test]
-    fn test_longest_substring_with_k_distinct() {
-        let input = "araaci";
+    fn test_longest_substring_same_chars() {
+        let input = "aabccbb";
 
-        let expected: usize = 4;
+        let expected: usize = 5; // 5
 
-        let got = longest_substring_with_k_distinct(input, 2);
+        let got = longest_substring_same_chars(input, 2);
 
         assert_eq!(expected, got);
     }
