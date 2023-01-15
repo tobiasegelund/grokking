@@ -1,3 +1,5 @@
+use crate::Interval;
+
 fn merge_overlapping_intervals(arr: &mut Vec<Interval>) -> Vec<Interval> {
     let mut merged_intervals: Vec<Interval> = Vec::new();
     arr.sort_by(|a, b| a.start.cmp(&b.start));
@@ -18,18 +20,6 @@ fn merge_overlapping_intervals(arr: &mut Vec<Interval>) -> Vec<Interval> {
     merged_intervals.push(Interval::new(start, end));
 
     merged_intervals
-}
-
-#[derive(Debug, Clone, Eq, Ord, PartialEq, PartialOrd)]
-struct Interval {
-    start: i32,
-    end: i32,
-}
-
-impl Interval {
-    fn new(start: i32, end: i32) -> Self {
-        Interval { start, end }
-    }
 }
 
 #[cfg(test)]
