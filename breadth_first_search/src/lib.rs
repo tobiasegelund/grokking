@@ -1,4 +1,5 @@
 mod binary_tree_order_traversal;
+mod level_averages_in_binary_tree;
 mod reverse_level_order_traversal;
 mod zigzag_traversal;
 
