@@ -1,5 +1,6 @@
 mod binary_tree_order_traversal;
 mod reverse_level_order_traversal;
+mod zigzag_traversal;
 
 #[derive(Clone)]
 struct Node {
